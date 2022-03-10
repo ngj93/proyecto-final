@@ -1,0 +1,138 @@
+* {
+  margin: o;
+  padding: o;
+  box-sizing: border-box;
+}
+header {
+  background-image: url(header4.jpg);
+  background-size: cover;
+  padding: 40 px;
+}
+body {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(201, 196, 224, 1) 57%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+.contenedor {
+  display: flex;
+}
+
+.logo {
+  padding: 35px;
+}
+nav {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(222, 241, 238);
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+section p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: darkgreen;
+  font-size: xx-large;
+}
+.i {
+  width: 25px;
+  height: 25vh;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 1.2rem;
+  justify-content: space-between;
+}
+li {
+  display: inline-block;
+  position: relative;
+  font-size: 1.4rem;
+  margin: 10px 20px;
+}
+ul ul {
+  position: absolute;
+  display: none;
+}
+ul ul li {
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+  font-weight: bold;
+}
+nav ul a:hover {
+  color: rgb(30, 178, 197);
+}
+nav ul li:hover ul {
+  display: block;
+  background-color: rgba(199, 217, 221, 0.986);
+}
+footer {
+  display: flex;
+  display: inline-block;
+  justify-content: center;
+}
+
+h4 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 50px;
+  color: rgb(19, 18, 18);
+}
+p {
+  text-align: center;
+}
+.contenedor {
+  width: 120%;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "header header header"
+    "section section section"
+    "main main main"
+    "formulario formulario formulario"
+    "footer footer footer";
+}
+.contenedor > div,
+.contenedor .header,
+.contenedor .section,
+.contenedor .formulario,
+.contenedor .main,
+.contenedor .footer {
+  background-color: blanchedalmond;
+  padding: 20px;
+  border-radius: 4px;
+}
+.contenedor .header {
+  grid-area: header;
+}
+.contenedor .section {
+  grid-area: section;
+}
+.contenedor .formulario {
+  grid-area: formulario;
+}
+.contenedor .footer {
+  grid-area: footer;
+}
+
+@media screen and (max-widht: 768px) {
+  .contenedor {
+    grid-template-areas:
+      "header header header"
+      "section section section"
+      "main main main"
+      "formulario formulario formulario"
+      "footer footer footer";
+  }
+}
